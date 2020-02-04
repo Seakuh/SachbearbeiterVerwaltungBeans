@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+<h:body>
+	<h:form>
+		<ui:composition>
+			<h:panelGrid columns="2">
+				<h:outputText value="Administrator" />
+				<h:selectBooleanCheckbox value="#{SachbearbeiterS.admin}" />
+				<h:outputText value="Sachbearbeiter" />
+				<h:selectBooleanCheckbox value="#{SachbearbeiterS.normal}" />
+			</h:panelGrid>
+		</ui:composition>
+	</h:form>
+</h:body>
+
+</html>

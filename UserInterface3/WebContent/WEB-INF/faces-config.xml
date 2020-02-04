@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+
+
+	<!-- Menue + Login -->
+
+	<navigation-rule>
+		<from-view-id>/Menue.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/Login.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>admin</from-outcome>
+			<to-view-id>/AdminAS.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>sachbearbeiter</from-outcome>
+			<to-view-id>/SachbearbeiterAS.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/Login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>abbruch</from-outcome>
+			<to-view-id>/Menue.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- AdminSachbearbeiterErzeugen Abbruch -->
+
+	<navigation-rule>
+		<from-view-id>/AdminSachbearbeiterErzeugen.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>abbruch</from-outcome>
+			<to-view-id>/AdminAS.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+		<navigation-rule>
+		<from-view-id>/AdminAS.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>ausloggen</from-outcome>
+			<to-view-id>/Menue.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+
+
+</faces-config>

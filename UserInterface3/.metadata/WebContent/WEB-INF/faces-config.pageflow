@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15752920721530" configfile="/UserInterface3/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Menue.xhtml" id="pf15761627279860" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf15761627279871" inlinks="pf15761681226627" path="/Menue.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Login.xhtml" id="pf15761627279872" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf15761627279873 pf15761627279874 pf15761681226627" inlinks="pf15761627279871" path="/Login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="AdminAS.xhtml" id="pf15761627279875" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf15761627279873" path="/AdminAS.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="SachbearbeiterAS.xhtml" id="pf15761627279876" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf15761627279874" path="/SachbearbeiterAS.xhtml"/>
+  <links id="pf15761627279871" target="pf15761627279872" source="pf15761627279860" outcome="login"/>
+  <links id="pf15761627279873" target="pf15761627279875" source="pf15761627279872" outcome="admin"/>
+  <links id="pf15761627279874" target="pf15761627279876" source="pf15761627279872" outcome="sachbearbeiter"/>
+  <links id="pf15761681226627" target="pf15761627279860" source="pf15761627279872" outcome="abbruch"/>
+</pageflow:Pageflow>

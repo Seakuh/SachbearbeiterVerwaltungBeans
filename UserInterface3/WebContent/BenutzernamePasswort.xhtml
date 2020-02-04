@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+<h:body>
+	<h:form>
+		<ui:composition>
+			<h:form>
+				<h:panelGrid columns="1">
+
+					<h:outputText value="Benutzername" />
+					<h:inputText id="BenutzerName"
+						value="#{SachbearbeiterS.benutzername}" />
+
+					<h:outputText value="Passwort" />
+					<h:inputSecret id="Passwort" value="#{SachbearbeiterS.passwort}" />
+
+				</h:panelGrid>
+			</h:form>
+		</ui:composition>
+	</h:form>
+</h:body>
+
+</html>

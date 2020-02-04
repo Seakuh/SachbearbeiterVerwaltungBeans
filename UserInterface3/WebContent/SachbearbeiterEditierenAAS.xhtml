@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:H="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Sachbearbeiter Editieren - Sachbearbeiter</title>
+</h:head>
+<h:body>
+	<h2>
+		<h:outputText value="Sachbearbeiter bearbeiten - Sachbearbeiter" />
+	</h2>
+	<h:form>
+
+		<h:panelGrid columns="1">
+
+			<h:outputLabel value="Ausgewählter Sachbearbieter" />
+			<h:selectOneMenu value="#{sachbearbeiterAuswahl.sachbearbeiter}">
+				<f:selectItems
+					value="#{sachbearbeiterAuswahl.sachbearbeiterCollectionString}" />
+			</h:selectOneMenu>
+
+			<h:panelGrid columns="2">
+				<ui:include src="/BenutzernamePasswort.xhtml"></ui:include>
+			</h:panelGrid>
+
+			<h:panelGrid columns="1">
+				<ui:include src="/Berechtigung.xhtml"></ui:include>
+			</h:panelGrid>
+
+			<h:panelGrid columns="1">
+				<h:outputText value="Gebuchte Fortbildungen" />
+
+				<h:inputTextarea rows="7" cols="40"
+					value="#{sachbearbeiterAuswahl.gebuchteFortbildungen}"
+					readonly="true" />
+			</h:panelGrid>
+
+			<h:messages />
+
+		</h:panelGrid>
+
+
+		<h:commandButton value="Speichern"
+			action="#{sachbearbeiterSachbearbeiterEditierenAAS.start}" />
+		<h:commandButton value="Zurück" immideate="true"
+			action="SachbearbeiterAS.xhtml" />
+
+	</h:form>
+
+</h:body>
+</html>

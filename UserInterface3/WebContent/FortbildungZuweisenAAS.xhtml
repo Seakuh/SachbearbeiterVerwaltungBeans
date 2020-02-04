@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+<title>Fortbildung zuweisen</title>
+</head>
+<body>
+	<h2>
+		<h:outputText value="Fortbildung Zuweisen" />
+	</h2>
+	<h:form>
+		<h:panelGrid columns="2">
+
+			<h:outputText value="Ausgewählte Fortbildung" />
+			<h:selectOneMenu value="#{fortbildungAuswaehlenComboBox.fortbildung}">
+				<f:selectItems
+					value="#{fortbildungAuswaehlenComboBox.fortbildungCollectionString}" />
+			</h:selectOneMenu>
+
+			<h:outputText value="Ausgewählter Sachbearbeiter" />
+			<h:selectOneMenu value="#{sachbearbeiterAuswahl.sachbearbeiter}">
+				<f:selectItems
+					value="#{sachbearbeiterAuswahl.sachbearbeiterCollectionString}" />
+			</h:selectOneMenu>
+		</h:panelGrid>
+
+		<h:panelGrid columns="2">
+			<h:outputText value="Belegt" />
+			<h:selectBooleanCheckbox value="#{fortbildungZuweisenAAS.belegt}" />
+			<h:outputText value="Bestanden" />
+			<h:selectBooleanCheckbox value="#{fortbildungZuweisenAAS.bestanden}" />
+		</h:panelGrid>
+
+		<h:panelGrid columns="1">
+			<h:outputText value="Gebuchte Fortbildungen" />
+
+			<h:inputTextarea rows="7" cols="40"
+				value="#{sachbearbeiterAuswahl.gebuchteFortbildungen}"
+				readonly="true" />
+		</h:panelGrid>
+
+		<h:messages />
+
+		<h:panelGrid columns="2">
+
+
+			<h:commandButton value="Zuweisen"
+				action="#{fortbildungZuweisenAAS.start}" />
+			<h:commandButton value="Zurück" immideate="true"
+				action="#{fortbildungZuweisenAAS.zurueck}" />
+
+
+		</h:panelGrid>
+	</h:form>
+
+</body>
+</html>

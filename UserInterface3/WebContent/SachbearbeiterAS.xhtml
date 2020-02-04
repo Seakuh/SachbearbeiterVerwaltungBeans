@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Sachbearbeiterverwaltung - Sachbearbeiter Menue</title>
+
+</h:head>
+<h:body>
+	<h2>
+		<h:outputText value="Sachbearbeiterverwaltung - Sachbearbeiter Menü" />
+	</h2>
+</h:body>
+<h:form>
+	<h:panelGrid columns="7">
+
+		<h:commandButton value="Editieren" immideate="true"
+			action="SachbearbeiterSachbearbeiterEditierenAAS.xhtml" />
+		<h:commandButton value="Fortbildung zuweisen" immideate="true"
+			action="#{fortbildungZuweisenAAS.oeffnenSachbearbeiter}" />
+		<h:commandButton value="Fortbildungszuordnung löschen"
+			immideate="true"
+			action="#{fortbildungLoeschenAAS.oeffnenSachbearbeiter}" />
+		<h:commandButton value="Ausloggen" immideate="true"
+			action="/Menue.xhtml?faces-redirect=true" />
+
+
+	</h:panelGrid>
+
+</h:form>
+
+</html>
